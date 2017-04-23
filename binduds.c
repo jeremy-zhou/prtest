@@ -11,7 +11,7 @@ void binduds(const char* const name)
     exit(-2);
   size = offsetof(struct sockaddr_un,sun_path) + strlen(un.sun_path);
   if(bind(fd,(struct sockaddr*)&un,size) < 0)
-    exit(-1);
+    exit(-2);
     
   exit(0);
 }
